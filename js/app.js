@@ -28,6 +28,7 @@ var object;
 var charRaceText = "";
 var charRaceType = "";
 var littleTheme = "";
+var charClass = "";
 
 $(function() {
     dispLinks.init();
@@ -214,99 +215,99 @@ function parseCharacter(inputChar) {
 
                     switch(j.substring(11,14)) {
                         case "AcP":
-                            buildXML += "\t\t<theme type=\"string\">Ace Pilot</theme>\n";
+                            fullTheme = "Ace Pilot";
                             littleTheme = "acepilot";
                             break;
                         case "Bio":
-                            buildXML += "\t\t<theme type=\"string\">Biotechnician</theme>\n";
+                            fullTheme = "Biotechnician";
                             littleTheme = "biotechnician";
                             break;
                         case "BoH":
-                            buildXML += "\t\t<theme type=\"string\">Bounty Hunter</theme>\n";
+                            fullTheme = "Bounty Hunter";
                             littleTheme = "bountyhunter";
                             break;
                         case "CoA":
-                            buildXML += "\t\t<theme type=\"string\">Corporate Agent</theme>\n";
+                            fullTheme = "Corporate Agent";
                             littleTheme = "corporateagent";
                             break;
                         case "Cul":
-                            buildXML += "\t\t<theme type=\"string\">Cultist</theme>\n";
+                            fullTheme = "Cultist";
                             littleTheme = "cultist";
                             break;
                         case "Cyb":
-                            buildXML += "\t\t<theme type=\"string\">Cyberborn</theme>\n";
+                            fullTheme = "Cyberborn";
                             littleTheme = "cyberborn";
                             break;
                         case "DTo":
-                            buildXML += "\t\t<theme type=\"string\">Death-Touched</theme>\n";
+                            fullTheme = "Death-Touched";
                             littleTheme = "deathtouched";
                             break;
                         case "Dra":
-                            buildXML += "\t\t<theme type=\"string\">Dragonblood</theme>\n";
+                            fullTheme = "Dragonblood";
                             littleTheme = "dragonblood";
                             break;
                         case "DrP":
-                            buildXML += "\t\t<theme type=\"string\">Dream Prophet</theme>\n";
+                            fullTheme = ">Dream Prophet";
                             littleTheme = "dreamprophet";
                             break;
                         case "Gla":
-                            buildXML += "\t\t<theme type=\"string\">Gladiator</theme>\n";
+                            fullTheme = "Gladiator";
                             littleTheme = "gladiator";
                             break;
                         case "Ico":
-                            buildXML += "\t\t<theme type=\"string\">Icon</theme>\n";
+                            fullTheme = "Icon";
                             littleTheme = "icon";
                             break;
                         case "Mer":
-                            buildXML += "\t\t<theme type=\"string\">Mercenary</theme>\n";
+                            fullTheme = "Mercenary";
                             littleTheme = "mercenary";
                             break;
                         case "Out":
-                            buildXML += "\t\t<theme type=\"string\">Outlaw</theme>\n";
+                            fullTheme = "Outlaw";
                             littleTheme = "outlaw";
                             break;
                         case "Pri":
-                            buildXML += "\t\t<theme type=\"string\">Priest</theme>\n";
+                            fullTheme = "Priest";
                             littleTheme = "priest";
                             break;
                         case "Rob":
-                            buildXML += "\t\t<theme type=\"string\">Roboticist</theme>\n";
+                            fullTheme = "Roboticist";
                             littleTheme = "roboticist";
                             break;
                         case "Sch":
-                            buildXML += "\t\t<theme type=\"string\">Scholar</theme>\n";
+                            fullTheme = "Scholar";
                             littleTheme = "scholar";
                             break;
                         case "SoD":
-                            buildXML += "\t\t<theme type=\"string\">Solar Disciple</theme>\n";
+                            fullTheme = "Solar Disciple";
                             littleTheme = "solardisciple";
                             break;
                         case "SPi":
-                            buildXML += "\t\t<theme type=\"string\">Space Pirate</theme>\n";
+                            fullTheme = "Space Pirate";
                             littleTheme = "spacepirate";
                             break;
                         case "Spa":
-                            buildXML += "\t\t<theme type=\"string\">Spacefarer</theme>\n";
+                            fullTheme = "Spacefarer";
                             littleTheme = "spacefarer";
                             break;
                         case "TeP":
-                            buildXML += "\t\t<theme type=\"string\">Tempered Pilgrim</theme>\n";
+                            fullTheme = "Tempered Pilgrim";
                             littleTheme = "temperedpilgrim";
                             break;
                         case "WiW":
-                            buildXML += "\t\t<theme type=\"string\">Wild Warden</theme>\n";
+                            fullTheme = "Wild Warden";
                             littleTheme = "wildwarden";
                             break;
                         case "Xna":
-                            buildXML += "\t\t<theme type=\"string\">Xenoarchaeologist</theme>\n";
+                            fullTheme = "Xenoarchaeologist";
                             littleTheme = "xenoarchaeologist";
                             break;
                         case "Xen":
-                            buildXML += "\t\t<theme type=\"string\">Xenoseeker</theme>\n";
+                            fullTheme = "Xenoseeker";
                             littleTheme = "xenoseeker";
                             break;
                         default:
-                            buildXML += "\t\t<theme type=\"string\">Themeless</theme>\n";
+                            fullTheme = "Themeless";
                             littleTheme = "themeless";
                     }
                 }
@@ -328,7 +329,7 @@ function parseCharacter(inputChar) {
                 
                 buildXML += "\t\t\t<id-" + thisIteration + ">\n";
                 var getArchetype = w.name.split("(")[1].split(")")[0];
-                var charClass = w.name.split("(")[0].trim();
+                charClass = w.name.split("(")[0].trim();
                 var smallCharClass = charClass.toLowerCase().replace(/[ _-]/g, '');
                 //console.log("Class reference: " + smallCharClass);
                 
@@ -387,8 +388,20 @@ function parseCharacter(inputChar) {
                 buildXML += "\t\t\t<id-" + thisIteration + ">\n";
 
                 buildXML += "\t\t\t\t<label type=\"string\">" + w.name + "</label>\n";
-                buildXML += "\t\t\t\t<ranks type=\"number\">" + w.skRanks + "</ranks>\n";
-                buildXML += "\t\t\t\t<total type=\"number\">" + w.stNet + "</total>\n";
+                if (w.hasOwnProperty("skRanks")) {
+                    buildXML += "\t\t\t\t<ranks type=\"number\">" + w.skRanks + "</ranks>\n";
+                } else {
+                    buildXML += "\t\t\t\t<ranks type=\"number\">0</ranks>\n";
+                }
+                if (w.hasOwnProperty("stNet")) {
+                    buildXML += "\t\t\t\t<total type=\"number\">" + w.stNet + "</total>\n";
+                } else {
+                    buildXML += "\t\t\t\t<total type=\"number\">0</total>\n";
+                }
+                
+                
+                //buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                
 
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }

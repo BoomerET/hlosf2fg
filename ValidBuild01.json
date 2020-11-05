@@ -1,7 +1,7 @@
 {
 	"portfolio": {
 		"charId": "pJFfDR6U",
-		"version": 56,
+		"version": 110,
 		"baseline": 0
 	},
 	"metadata": {
@@ -66,12 +66,12 @@
 					"summary": "Can hold 4 hands worth of items at the ready.",
 					"compset": "Ability"
 				},
-				"abThemeKnowCyb.130": {
+				"abThemeKnowXen.331": {
 					"name": "Theme Knowledge (Ex)",
-					"description": "You enthusiastically study the field of cybernetics and seek to keep abreast of new applications and experimental technologies. Reduce the DCs of Engineering checks to identify cybernetic augmentations and of Life Science checks to recall knowledge about cybernetic augmentation techniques, as well as corporations and other research facilities involved in the production of and experimentation with cybernetic augmentations, by 5. Computers is a class skill for you, though if it is a class skill from the class you take at 1st level, you instead gain a +1 bonus to Computers checks. In addition, you gain an ability adjustment of +1 to Intelligence at character creation.",
-					"summary": "-5 to the DC for Engineering checks to ID cybernetic augmentations, and Life Science to recall cybernetic augmentation techniques, as well as corporations/research facilities involved in creating cybernetic augmentations.",
+					"description": "You are trained to seek out, identify, and interact with alien life-forms. Reduce the DC to identify a rare creature using Life Science by 5. Life Science is a class skill for you, though if it is a class skill from the class you take at 1st level, you instead gain a +1 bonus to Life Science checks. In addition, you gain an ability adjustment of +1 to Charisma at character creation.",
+					"summary": "-5 DC for checks related to Life Science when identify rare creatures.",
 					"compset": "Ability",
-					"AbScUsed": "asInt",
+					"AbScUsed": "asCha",
 					"AbilType": "Extra"
 				},
 				"abTrickAttackOpr.144": {
@@ -116,8 +116,9 @@
 					"description": "Charisma measures a character’s personality, personal magnetism, ability to lead, and appearance. A character with a Charisma score of 0 is unconscious. Your character’s Charisma modifier is factored into the following:\n\n• Bluff, Diplomacy, Disguise, Intimidate, and some Profession skill checks.\n\n• Checks that represent attempts to influence others, including the envoy’s extraordinary abilities.",
 					"summary": "Charisma measures a character’s personality, personal magnetism, ability to lead, and appearance.",
 					"compset": "AbilScore",
-					"stAbScModifier": 1,
-					"stNet": 13,
+					"stAbScModifier": 2,
+					"stNet": 14,
+					"stMiscMod": 1,
 					"AbScUsed": "asCha"
 				},
 				"asCon.33": {
@@ -142,8 +143,8 @@
 					"summary": "Intelligence represents how well your character learns and reasons, and is often associated with knowledge and education.",
 					"compset": "AbilScore",
 					"stAbScModifier": 1,
-					"stNet": 13,
-					"stMiscMod": -1,
+					"stNet": 12,
+					"stMiscMod": -2,
 					"AbScUsed": "asInt"
 				},
 				"asStr.31": {
@@ -291,8 +292,8 @@
 					"description": "You can use words and actions to create distractions, misdirect your opponents, tell convincing lies, and pass along secret messages.\n\nDiversion\n\nAs a move action, you can use Bluff to create a diversion. Your Bluff check is opposed by the Sense Motive check of the creature you are attempting to beguile. If you succeed, you can either attempt the hide task of Stealth as if you had cover or concealment, or you gain a +10 bonus to perform the palm an object task of Sleight of Hand (your choice). Occasionally, your Bluff check might be opposed by several creatures (for instance, if you are on a crowded space station promenade); in such cases, the GM might decide to roll several Sense Motive checks, and you succeed only against creatures with Sense Motive results lower than your Bluff result.\n\nFeint\n\nAs a standard action, you can use Bluff to feint in combat, enabling you to treat your opponent as flat-footed for your next attack against it before the end of your next turn. The DC of this check is equal to either 10 + your opponent’s total Sense Motive skill bonus, or 15 + 1-1/2 × the opponent’s CR, whichever is greater. You can’t feint against a creature that doesn’t have an Intelligence score, and you cannot take 10 or take 20 on a Bluff check to feint.\n\nLie\n\nYou can use Bluff to deceive someone or tell a convincing lie. A quick, simple lie in combat is part of combat banter; otherwise, telling a lie is at least a full action, but it can take longer if the lie is elaborate, as determined by the GM. If the creature is suspicious or attending carefully to your lie (as per the detect deception task for Sense Motive), the check is opposed by the Sense Motive check of the creature you are lying to; otherwise, the DC of this check is equal to 10 + the creature’s total Sense Motive skill bonus. If you succeed, the creature you are lying to believes you are telling the truth, at least until confronted with evidence to the contrary. The GM may determine that some lies are so improbable that it is impossible to convince someone they are true.\n\nThe DCs for Bluff checks to lie are adjusted based on the target's initial attitude toward you (see Diplomacy on page 139) as well as other circumstances determined by the GM (such as the plausibility of the lie).\n\nInitial Attitude — DC Modifier\nHostile — +10\nUnfriendly — +5\nIndifferent — +0\nFriendly — -5\nHelpful — -5\n\nPass Secret Message\n\nYou can use Bluff to pass a secret message to an ally without others understanding the message’s true meaning. Doing so in combat is part of combat banter. The DC of this check is 15 for simple messages and 20 for more complex messages, as determined by the GM. Those overhearing the message can attempt an opposed Sense Motive check to learn the gist of the message. You cannot take 20 on a Bluff check to pass a secret message.",
 					"summary": "You can use words and actions to create distractions, misdirect your opponents, tell convincing lies, and pass along secret messages.",
 					"compset": "Skill",
-					"stAbScModifier": 1,
-					"stNet": 2,
+					"stAbScModifier": 2,
+					"stNet": 3,
 					"stMiscMod": 1,
 					"AbScUsed": "asCha"
 				},
@@ -304,8 +305,8 @@
 					"skRanks": 1,
 					"skClassSkillBon": 3,
 					"stAbScModifier": 1,
-					"stNet": 7,
-					"stMiscMod": 2,
+					"stNet": 6,
+					"stMiscMod": 1,
 					"AbScUsed": "asInt"
 				},
 				"skCulture.62": {
@@ -325,8 +326,8 @@
 					"description": "You can persuade others to be friendly toward you, resolve conflicts and differences, and learn common knowledge and rumors floating around a settlement.\n\nChange Attitude\n\nWhen you interact socially with another creature, that creature has an initial attitude toward you. Attitudes fall into five categories (from worst to best): hostile, unfriendly, indifferent, friendly, and helpful. You can use Diplomacy to change a creature’s initial attitude to a more positive one, but at the risk of angering the creature and worsening its attitude toward you if you fail. This is a language-dependent ability. The creature must have an Intelligence of 3 or higher, and you must spend at least 1 minute interacting and conversing with the creature to change its attitude. The DC of this check is equal to either 10 + your opponent’s total Diplomacy skill bonus, or 15 + 1-1/2 × the opponent’s CR (or the encounter’s CR, if you are trying to change the attitude of a group of creatures), whichever is higher. The DC is modified by the creature’s initial attitude (see page 140) and other circumstances, as determined by the GM. If you succeed, the creature’s attitude improves by one category (for instance, a hostile creature becomes unfriendly). If you exceed the DC by 5 or more, you can choose to spend 10 more minutes interacting with the creature to improve its attitude by one additional category. If you fail the check by 5 or more, you anger the creature, and the creature’s attitude worsens by one category (for instance, a friendly creature becomes indifferent).\n\nAttacking a creature always worsens its attitude by one category for each attack made, and may have other consequences based on the creature’s current attitude.\n\nPositively affecting a creature’s attitude takes time. You typically can't use Diplomacy to positively change a creature’s attitude by more than one category (or two categories if you spend the extra time) within a 24-hour period, unless the GM decides otherwise or you have an ability that allows you to do so.\n\nThe five categories of initial attitude are described below, along with the effects of negatively changing each attitude.\n\nHostile\n\n• A hostile creature would rather attack you either physically or verbally, than civilly converse with you. Most enemies you meet are hostile. It’s often hard to talk diplomatically with hostile creatures, though it can be done remotely (via a communication device) or by avoiding combat with the creatures while persuading them to listen to reason. If you fail the Diplomacy check by 5 or more, you can’t attempt to change a hostile creature’s attitude again for 24 hours.\n\nUnfriendly\n\n• Unfriendly creatures are typically wary of you, or afraid you will try to hurt them if they aren’t careful or fail to keep you at bay. Unfriendly creatures become hostile when angered or attacked.\n\nIndifferent\n\n• Indifferent creatures take little notice of you, but hold no ill will against you. They don’t care about your plight, but may give you simple advice or directions. Most creatures you meet in everyday life or in settlements are indifferent. Indifferent creatures become unfriendly when angered or attacked.\n\nFriendly\n\n• Either due to a generally cheerful disposition or a predisposition to like you, friendly creatures treat you with kindness and respect. They may give you more-detailed advice or simple aid, but generally won’t go out of their way to be helpful. If angered or attacked, friendly creatures become indifferent and often try to avoid further contact with you if possible.\n\nHelpful\n\n• Helpful creatures are not only friendly, but desire to help you, within reasonable means. Helpful creatures typically give you more lengthy or difficult aid, or offer small services that are readily available to them. When angered or attacked, helpful creatures become friendly, but somewhat guarded, as they are often confused by such reactions to their generosity.\n\nThe DCs for Diplomacy checks to change attitudes are adjusted based on the creature’s initial attitude as well as other circumstances determined by the GM.\n\nInitial Attitude — DC Modifier\nHostile — +10\nUnfriendly — +5\nIndifferent — +0\nFriendly — -5\nHelpful — -*\n* You cannot improve a creature’s attitude above helpful.\n\nGather Information\n\nYou can use Diplomacy to gather information about a specific topic or individual. You must spend at least 1d4 hours canvassing people within a settlement or local region. If you succeed, you learn something about that topic or individual, though the GM may determine that some information is simply unknown to the local people.\n\nThe DCs for Diplomacy checks to gather information are based on the nature of the information being sought and may be adjusted by the GM to reflect other circumstances, such as bribes or gifts.\n\nInformation Sought — DC\nCommon facts or rumors — 10\nObscure or secret knowledge — 20 or more\nProminent or well-known individual — 5 + character’s CR\nAverage or ordinary individual — 10 + character’s CR\nMysterious or obscure individual — 15 + character’s CR",
 					"summary": "You can use this skill to persuade others to agree with your arguments, to resolve differences, and to gather valuable information or rumors from people. This skill is also used to negotiate conflicts by using the proper etiquette and manners suitable to the problem.",
 					"compset": "Skill",
-					"stAbScModifier": 1,
-					"stNet": 2,
+					"stAbScModifier": 2,
+					"stNet": 3,
 					"stMiscMod": 1,
 					"AbScUsed": "asCha"
 				},
@@ -335,8 +336,8 @@
 					"description": "You are able to change your appearance to blend in and deceive others, whether to infiltrate\n\nChange Appearance\n\nYou can use Disguise to change your appearance with 1d3 × 10 minutes of work with a disguise kit, by casting a spell such as disguise self, or by using a technological device such as a holoskin. The GM rolls the Disguise check in secret, so you’re not sure how good your disguise is. This check is opposed by the Perception check (see page 144) of anyone who might realize that you are not who you appear to be. If you are not drawing attention to yourself, other creatures do not usually get to attempt a Perception check to pierce your disguise. If creatures are being particularly alert for suspicious activity (such as security personnel on a starship or space station), it’s assumed that such observers are taking 10 on their Perception checks.\n\nThe effectiveness of your disguise depends on how much you’re changing your appearance. Without the aid of transformative magic or technology that allows you to do otherwise, you can use Disguise only to appear as a creature that is your size or one size category larger or smaller than you. This does not change your actual size or reach. Disguises are general-you cannot disguise yourself as a specific person.\n\nCertain magic spells, such as disguise self, grant you a +10 bonus to Disguise checks.\n\nThe DCs for Disguise checks are adjusted by the type of disguise as well as other circumstances determined by the GM. These modifiers are cumulative; use all that apply.\n\nDisguise — DC Modifier\nMinor details altered only — -5\nMajor feature altered — +2 to +5\nDisguised as a different race of the same creature type — +2 to +8\nDisguised as a different creature type — +10\nDisguised as a different size category — +10",
 					"summary": "You are skilled at changing your appearance.",
 					"compset": "Skill",
-					"stAbScModifier": 1,
-					"stNet": 2,
+					"stAbScModifier": 2,
+					"stNet": 3,
 					"stMiscMod": 1,
 					"AbScUsed": "asCha"
 				},
@@ -354,8 +355,8 @@
 					"description": "You can rattle your foes or bully them to do what you want with verbal threats or displays of prowess.\n\nBully\n\nYou can use Intimidate to bully a creature to temporarily change its attitude to helpful (see Diplomacy on page 139). This is a language-dependent, sense-dependent ability. You must spend at least 1 minute conversing with the creature. The DC of this check is equal to either 10 + your opponent’s total Intimidate skill bonus, or 15 + 1-1/2 × the opponent’s CR, whichever is greater. If you succeed, the creature gives you information it has that you want, takes actions that do not endanger it, or grants limited assistance that you request, but does so under duress. Such a change in attitude lasts for 1d6 × 10 minutes. At the end of this time, the creature’s attitude toward you becomes unfriendly. If you fail the check by 5 or more, the creature’s attitude becomes unfriendly, or hostile if it was already unfriendly. If the creature becomes unfriendly due to a failed check, it is likely to try to deceive you or otherwise hinder your goals.\n\nDemoralize\n\nAs a standard action, you can use Intimidate to cause a creature within 30 feet of you to become shaken for a number of rounds. This is a sense-dependent ability. The DC of this check is equal to either 10 + your opponent’s total Intimidate skill bonus, or 15 + 1-1/2 × the opponent’s CR, whichever is greater. If you succeed, the target is shaken for 1 round. The duration increases by 1 round for every 5 by which the result of your check exceeds the DC.",
 					"summary": "You can use this skill to frighten your opponents or to get them to act in a way that benefits you. This skill includes verbal threats and displays of prowess.",
 					"compset": "Skill",
-					"stAbScModifier": 1,
-					"stNet": 2,
+					"stAbScModifier": 2,
+					"stNet": 3,
 					"stMiscMod": 1,
 					"AbScUsed": "asCha"
 				},
