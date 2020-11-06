@@ -19,7 +19,7 @@ startXML += "<root version=\"4\" dataversion=\"20201016\" release=\"19|CoreRPG:4
 startXML += "\t<character>\n";
 
 var endXML = "\t</character>\n</root>\n";
-var allXML = "";
+//var allXML = "";
 
 var pcFilename = "";
 
@@ -29,6 +29,20 @@ var charRaceText = "";
 var charRaceType = "";
 var littleTheme = "";
 var charClass = "";
+var smallCharClass = "";
+var getArchetype = "";
+var soldierArray = ["Acrobatics", "Athletics", "Engineering", "Intimidate", "Medicine", "Piloting", "Survival"];
+var envoyArray =  ["Acrobatics", "Athletics", "Bluff", "Computers", "Culture", "Diplomacy", "Disguise", "Engineering", "Intimidate", "Medicine", "Perception", "Piloting", "Sense Motive", "Sleight of Hand", "Stealth"];
+var mechanicArray =  ["Athletics", "Computers", "Engineering", "Medicine", "Perception", "Piloting"];
+var mysticArray =  ["Bluff", "Culture", "Diplomacy", "Intimidate", "Life Science", "Medicine", "Mysticism", "Perception", "Sense Motive", "Survival"];
+var operativeArray =  ["Acrobatics", "Athletics", "Bluff", "Computers", "Culture", "Disguise", "Engineering", "Intimidate", "Medicine", "Perception", "Piloting", "Sense Motive", "Sleight of Hand", "Stealth", "Survival"];
+var solarianArray =  ["Acrobatics", "Athletics", "Diplomacy", "Intimidate", "Mysticism", "Perception", "Physical Science", "Sense Motive", "Stealth"];
+var technomancerArray =  ["Computers", "Engineering", "Life Science", "Mysticism", "Physical Science", "Piloting", "Sleight of Hand"];
+
+
+
+
+
 
 $(function() {
     dispLinks.init();
@@ -197,7 +211,10 @@ function parseCharacter(inputChar) {
                 charRaceText = x;
             } else if (k == "actRace") {
                 charRaceType = x;
+            } else if (k == "actAlignment") {
+                buildXML += "\t\t<alignment type=\"string\">" + x + "</alignment>\n";
             }
+            
         });
         buildXML += "\t\t<race type=\"string\">" + charRaceText + "</race>\n";
 		buildXML += "\t\t<racelink type=\"windowreference\">\n";
@@ -328,12 +345,19 @@ function parseCharacter(inputChar) {
                 thisIteration = pad(classCount, 5);
                 
                 buildXML += "\t\t\t<id-" + thisIteration + ">\n";
-                var getArchetype = w.name.split("(")[1].split(")")[0];
+                // Check to see if we even have an archetype
+                if (w.name.indexOf('(') == -1) {
+                    console.log("No archetype");
+                } else {
+                    getArchetype = w.name.split("(")[1].split(")")[0];
+                }
+                //getArchetype = w.name.split("(")[1].split(")")[0];
                 charClass = w.name.split("(")[0].trim();
-                var smallCharClass = charClass.toLowerCase().replace(/[ _-]/g, '');
+                smallCharClass = charClass.toLowerCase().replace(/[ _-]/g, '');
                 //console.log("Class reference: " + smallCharClass);
-                
-                buildXML += "\t\t\t\t<archetype type=\"string\">" + getArchetype + "</archetype>\n";
+                if (getArchetype != "") {
+                    buildXML += "\t\t\t\t<archetype type=\"string\">" + getArchetype + "</archetype>\n";
+                }
 
                 buildXML += "\t\t\t\t<archetypelink type=\"windowreference\">\n";
                 buildXML += "\t\t\t\t\<class>archetype</class>\n";
@@ -382,7 +406,7 @@ function parseCharacter(inputChar) {
 
         // Skills
         totalSkills = 1;
-        buildXML += "\t\t\t<skilllist>\n";
+        buildXML += "\t\t<skilllist>\n";
         $.each(v.items, function(j, w) {
             if (w.compset == "Skill") {
                 thisIteration = pad(totalSkills, 5);
@@ -400,16 +424,63 @@ function parseCharacter(inputChar) {
                 } else {
                     buildXML += "\t\t\t\t<total type=\"number\">0</total>\n";
                 }
-                buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                //buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                // Let's do Soldier first, he has only 8 class skills
+                //console.log(smallCharClass);
+                if (smallCharClass == "soldier") {
+                    //console.log(w.name);
+                    //console.log(jQuery.inArray(w.name, soldArray));
+                    if (jQuery.inArray(w.name, soldierArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "envoy") {
+                    if (jQuery.inArray(w.name, envoyArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "mechanic") {
+                    if (jQuery.inArray(w.name, mechanicArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "mystic") {
+                    if (jQuery.inArray(w.name, mysticArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "operative") {
+                    if (jQuery.inArray(w.name, operativeArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "solarian") {
+                    if (jQuery.inArray(w.name, solarianArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                } else if (smallCharClass == "technomancer") {
+                    if (jQuery.inArray(w.name, technomancerArray) >= 0) {
+                        buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                    } else {
+                        buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
+                    }
+                }
                 buildXML += "\t\t\t\t<showonminisheet type=\"number\">0</showonminisheet>\n";
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
-        buildXML += "\t\t\t</skilllist>\n";
+        buildXML += "\t\t</skilllist>\n";
 
         // Racial Traits
         var abilityCount = 1;
-        buildXML += "\t\t\t<traitlist>\n";
+        buildXML += "\t\t<traitlist>\n";
         $.each(v.items, function(j, w) {
             if (w.compset == "Ability" && !w.hasOwnProperty("AbilType")) {
                 // Need to determine if this is a class ability or racial trait
@@ -420,11 +491,11 @@ function parseCharacter(inputChar) {
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
-        buildXML += "\t\t\t</traitlist>\n";
+        buildXML += "\t\t</traitlist>\n";
 
         // Theme abilities
         var themeCount = 1;
-        buildXML += "\t\tt\<themeabilitylist>\n";
+        buildXML += "\t\t<themeabilitylist>\n";
         $.each(v.items, function(j, w) {
             if (w.compset == "Ability" && w.hasOwnProperty("AbScUsed")) {
                 thisIteration = pad(themeCount, 5);
@@ -434,11 +505,11 @@ function parseCharacter(inputChar) {
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
-        buildXML += "\t\tt\</themeabilitylist>\n";
+        buildXML += "\t\t</themeabilitylist>\n";
 
         // Class Abilities
         var classAbilCount = 1;
-        buildXML += "\t\tt\<specialabilitylist>\n";
+        buildXML += "\t\t<specialabilitylist>\n";
         $.each(v.items, function(j, w) {
             if (w.compset == "Ability" && !w.hasOwnProperty("AbScUsed") && w.hasOwnProperty("AbilType") && w.AbilType == "Extra") {
                 thisIteration = pad(classAbilCount, 5);
@@ -448,8 +519,46 @@ function parseCharacter(inputChar) {
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
-        buildXML += "\t\tt\</specialabilitylist>\n";
+        buildXML += "\t\t</specialabilitylist>\n";
+
+        // Notes/personal
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Personal") {
+                buildXML += "\t\t\t<gender type=\"string\">" + w.perGenderText + "</gender>\n";
+                buildXML += "\t\t\t<height type=\"string\">" + w.perHeight + "</height>\n";
+                buildXML += "\t\t\t<weight type=\"string\">" + w.perWeight + "</weight>\n";
+                buildXML += "\t\t\t<age type=\"string\">" + w.perAge + "</age>\n";
+            } else if (w.compset == "Deity") {
+                buildXML += "\t\t\t<deity type=\"string\">" + w.name + "</deity>\n";
+            } else if (w.compset == "Homeworld") {
+                buildXML += "\t\t\t<homeworld type=\"string\">" + w.name + "</homeworld>\n";
+            }
+        });
+        
+        // Languages
+        var langCount = 1;
+        buildXML += "\t\t\t<languagelist>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Language") {
+                thisIteration = pad(langCount, 5);
+                langCount += 1;
+                buildXML += "\t\t\t\t<id-" + thisIteration + ">\n";
+                buildXML += "\t\t\t\t\t<name type=\"string\">" + w.name + "</name>\n";
+                buildXML += "\t\t\t\t</id-" + thisIteration + ">\n";
+            }
+        });
+        buildXML += "\t\t\t</languagelist>\n";
+
+        // Size
+        if (charRaceType != "ysoki") {
+            buildXML += "\t\t\t<size type=\"string\">Medium</size>\n";
+        } else {
+            buildXML += "\t\t\t<size type=\"string\">Small</size>\n";
+        }
+
     });
+
+    
 
     buildXML += endXML;
     $('#charOutput').val(buildXML);
