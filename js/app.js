@@ -38,10 +38,11 @@ var mysticArray =  ["Bluff", "Culture", "Diplomacy", "Intimidate", "Life Science
 var operativeArray =  ["Acrobatics", "Athletics", "Bluff", "Computers", "Culture", "Disguise", "Engineering", "Intimidate", "Medicine", "Perception", "Piloting", "Sense Motive", "Sleight of Hand", "Stealth", "Survival"];
 var solarianArray =  ["Acrobatics", "Athletics", "Diplomacy", "Intimidate", "Mysticism", "Perception", "Physical Science", "Sense Motive", "Stealth"];
 var technomancerArray =  ["Computers", "Engineering", "Life Science", "Mysticism", "Physical Science", "Piloting", "Sleight of Hand"];
-
-
-
-
+var skillDex = ["Acrobatics", "Piloting", "Sleight of Hand", "Stealth"]
+var skillStr = ["Athletics"]
+var skillCha = ["Bluff", "Diplomacy", "Disguise", "Intimidate"]
+var skillInt = ["Computers", "Culture", "Engineering", "Life Science", "Medicine", "Physical Science"]
+var skillWis = ["Mysticism", "Perception", "Sense Motive", "Survival"]
 
 
 $(function() {
@@ -424,6 +425,9 @@ function parseCharacter(inputChar) {
                 } else {
                     buildXML += "\t\t\t\t<total type=\"number\">0</total>\n";
                 }
+                if (w.hasOwnProperty("stMiscMod")) {
+                    buildXML += "\t\t\t\t<miscmod type=\"number\">" + w.stMiscMod + "</miscmod>\n";
+                }
                 //buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
                 // Let's do Soldier first, he has only 8 class skills
                 //console.log(smallCharClass);
@@ -472,7 +476,19 @@ function parseCharacter(inputChar) {
                         buildXML += "\t\t\t\t<state type=\"number\">0</state>\n";
                     }
                 }
-                buildXML += "\t\t\t\t<showonminisheet type=\"number\">0</showonminisheet>\n";
+                if (jQuery.inArray(w.name, skillDex) >= 0) {
+                    buildXML += "\t\t\t\t<statname type=\"string\">dexterity</statname>\n";
+                } else if (jQuery.inArray(w.name, skillCha) >= 0) {
+                    buildXML += "\t\t\t\t<statname type=\"string\">charisma</statname>\n";
+                } else if (jQuery.inArray(w.name, skillInt) >= 0) {
+                    buildXML += "\t\t\t\t<statname type=\"string\">intelligence</statname>\n";
+                } else if (jQuery.inArray(w.name, skillStr) >= 0) {
+                    buildXML += "\t\t\t\t<statname type=\"string\">strength</statname>\n";
+                } else if (jQuery.inArray(w.name, skillWis) >= 0) {
+                    buildXML += "\t\t\t\t<statname type=\"string\">wisdom</statname>\n";
+                }
+
+                buildXML += "\t\t\t\t<showonminisheet type=\"number\"></showonminisheet>\n";
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
