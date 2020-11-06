@@ -1,0 +1,1014 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="4" dataversion="20201016" release="19|CoreRPG:4">
+	<character>
+		<abilities>
+			<charisma>
+				<bonus type="number">2</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">15</score>
+			</charisma>
+			<constitution>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</constitution>
+			<dexterity>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</dexterity>
+			<intelligence>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</intelligence>
+			<key type="number">1</key>
+			<keyability type="string">charisma</keyability>
+			<keyabilitymod type="number">2</keyabilitymod>
+			<strength>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</strength>
+			<wisdom>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</wisdom>
+		</abilities>
+		<abilitiesedit>
+			<charisma>
+				<mod type="number">0</mod>
+			</charisma>
+			<constitution>
+				<mod type="number">0</mod>
+			</constitution>
+			<dexterity>
+				<mod type="number">0</mod>
+			</dexterity>
+			<intelligence>
+				<mod type="number">0</mod>
+			</intelligence>
+			<strength>
+				<mod type="number">0</mod>
+			</strength>
+			<wisdom>
+				<mod type="number">0</mod>
+			</wisdom>
+		</abilitiesedit>
+		<ac>
+			<sources>
+				<cmbmisc type="number">0</cmbmisc>
+				<eac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<dodge type="number">0</dodge>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</eac>
+				<kac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<ffmisc type="number">0</ffmisc>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</kac>
+			</sources>
+			<totals>
+				<cmd type="number">19</cmd>
+				<eac type="number">11</eac>
+				<kac type="number">11</kac>
+			</totals>
+		</ac>
+		<alignment type="string">LE</alignment>
+		<attackbonus>
+			<base type="number">0</base>
+			<melee>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</melee>
+			<ranged>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</ranged>
+			<thrown>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</thrown>
+		</attackbonus>
+		<classes>
+			<id-00001>
+				<archetype type="string">Arcanamirium Sage</archetype>
+				<archetypelink type="windowreference">
+					<class>archetype</class>
+					<recordname>reference.archetype.arcanamiriumsage@Starfinder Pact Worlds (Players)</recordname>
+				</archetypelink>
+				<classkey type="string">Charisma</classkey>
+				<classkeymod type="number">2</classkeymod>
+				<classskillranks type="number">8</classskillranks>
+				<classstamina type="number">6</classstamina>
+				<level type="number">1</level>
+				<name type="string">Envoy</name>
+				<shortcut type="windowreference">
+					<class>class</class>
+					<recordname>reference.class.envoy@Starfinder Core Rulebook</recordname>
+				</shortcut>
+				<skillranks type="number">8</skillranks>
+			</id-00001>
+		</classes>
+		<classlevel type="string">Envoy 1</classlevel>
+		<coins>
+			<slot1>
+				<amount type="number">0</amount>
+				<name type="string">Credits</name>
+			</slot1>
+			<slot2>
+				<amount type="number">0</amount>
+				<name type="string">UPB</name>
+			</slot2>
+			<slot3>
+				<amount type="number">0</amount>
+				<name type="string">Income</name>
+			</slot3>
+		</coins>
+		<companionlink type="windowreference">
+			<class />
+			<recordname />
+		</companionlink>
+		<defenses>
+			<sr>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</sr>
+		</defenses>
+		<deity type="string">Hylax</deity>
+		<dronelink type="windowreference">
+			<class />
+			<recordname />
+		</dronelink>
+		<encumbrance>
+			<armorcheckpenalty type="number">0</armorcheckpenalty>
+			<armormaxstatbonus type="number">0</armormaxstatbonus>
+			<armormaxstatbonusactive type="number">0</armormaxstatbonusactive>
+			<encstat type="number">1</encstat>
+			<heavyload type="number">13</heavyload>
+			<lightload type="number">6</lightload>
+			<load type="number">0</load>
+			<mediumload type="number">12</mediumload>
+			<state type="string">Unencumbered</state>
+			<strmodtemp type="number">0</strmodtemp>
+		</encumbrance>
+		<exp type="number">0</exp>
+		<expneeded type="number">0</expneeded>
+		<featlist />
+		<gender type="string">Male</gender>
+		<homeworldlink type="windowreference">
+			<class />
+			<recordname />
+		</homeworldlink>
+		<hp>
+			<current type="number">10</current>
+			<temporary type="number">0</temporary>
+			<total type="number">10</total>
+			<wounds type="number">0</wounds>
+		</hp>
+		<initiative>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+			<total type="number">1</total>
+		</initiative>
+		<inventorylist />
+		<languagelist />
+		<level type="number">1</level>
+		<loglist>
+			<id-00001>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Stat</record_added>
+				<value_added type="string">[STR] 2</value_added>
+			</id-00001>
+			<id-00002>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Stat</record_added>
+				<value_added type="string">[INT] -2</value_added>
+			</id-00002>
+			<id-00003>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Stat</record_added>
+				<value_added type="string">[WIS] 2</value_added>
+			</id-00003>
+			<id-00004>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Race</record_added>
+				<value_added type="string">Kasatha</value_added>
+			</id-00004>
+			<id-00005>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Hit Points</record_added>
+				<value_added type="string">4</value_added>
+			</id-00005>
+			<id-00006>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Trait</record_added>
+				<value_added type="string">Historian</value_added>
+			</id-00006>
+			<id-00007>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Trait</record_added>
+				<value_added type="string">Four-Armed</value_added>
+			</id-00007>
+			<id-00008>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Trait</record_added>
+				<value_added type="string">Desert Stride</value_added>
+			</id-00008>
+			<id-00009>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Racial Trait</record_added>
+				<value_added type="string">Natural Grace</value_added>
+			</id-00009>
+			<id-00010>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Theme</record_added>
+				<value_added type="string">Icon</value_added>
+			</id-00010>
+			<id-00011>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Theme Stat</record_added>
+				<value_added type="string">[CHA] 1</value_added>
+			</id-00011>
+			<id-00012>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Theme Ability</record_added>
+				<value_added type="string">Theme Knowledge</value_added>
+			</id-00012>
+			<id-00013>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Max Stamina Points</record_added>
+				<value_added type="string">6</value_added>
+			</id-00013>
+			<id-00014>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Hit Points</record_added>
+				<value_added type="string">6</value_added>
+			</id-00014>
+			<id-00015>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Stamina Points</record_added>
+				<value_added type="string">6</value_added>
+			</id-00015>
+			<id-00016>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Reflex</record_added>
+				<value_added type="string">2</value_added>
+			</id-00016>
+			<id-00017>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Will</record_added>
+				<value_added type="string">2</value_added>
+			</id-00017>
+			<id-00018>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Class Skill</record_added>
+				<value_added type="string">Acrobatics, Intimidate, Athletics, Medicine, Bluff, Perception, Computers, Piloting, Culture, Profession (Cha, Int, or Wis), Diplomacy, Sense Motive, Disguise, Sleight of Hand, Engineering, Stealth</value_added>
+			</id-00018>
+			<id-00019>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Class</record_added>
+				<value_added type="string">envoy</value_added>
+			</id-00019>
+			<id-00020>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Class Ability</record_added>
+				<value_added type="string">Expertise (Ex) 1d6</value_added>
+			</id-00020>
+			<id-00021>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Proficiency</record_added>
+				<value_added type="string">Light Armor Proficiency</value_added>
+			</id-00021>
+			<id-00022>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Proficiency</record_added>
+				<value_added type="string">Basic Melee Weapon Proficiency</value_added>
+			</id-00022>
+			<id-00023>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Proficiency</record_added>
+				<value_added type="string">Small Arm Proficiency</value_added>
+			</id-00023>
+			<id-00024>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Proficiency</record_added>
+				<value_added type="string">Grenade Proficiency</value_added>
+			</id-00024>
+			<id-00025>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Class Ability</record_added>
+				<value_added type="string">Skill Expertise (Ex)</value_added>
+			</id-00025>
+			<id-00026>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Class Ability</record_added>
+				<value_added type="string">Envoy Improvisation</value_added>
+			</id-00026>
+			<id-00027>
+				<action_added type="string">ADD</action_added>
+				<level_added type="number">1</level_added>
+				<record_added type="string">Theme Level</record_added>
+				<value_added type="string">Icon</value_added>
+			</id-00027>
+		</loglist>
+		<mechlink type="windowreference">
+			<class />
+			<recordname />
+		</mechlink>
+		<name type="string">Envoy Negotiator FG Built</name>
+		<powerarmor type="number">0</powerarmor>
+		<proficiencylist>
+			<id-00001>
+				<benefit type="formattedtext">
+					<p>You gain proficiency in light armor (see Armor Proficiency on page 242).</p>
+				</benefit>
+				<locked type="number">1</locked>
+				<name type="string">Light Armor Proficiency</name>
+				<normal type="formattedtext" />
+				<prequisite type="formattedtext" />
+				<refnode type="string">reference.feat.lightarmorproficiency</refnode>
+				<special type="formattedtext" />
+				<summary type="formattedtext">
+					<p>You know how to use light armor.</p>
+				</summary>
+				<type type="string">Combat</type>
+			</id-00001>
+			<id-00002>
+				<benefit type="formattedtext">
+					<p>You gain proficiency in basic melee weapons (see Weapon Proficiency on page 243).</p>
+				</benefit>
+				<locked type="number">1</locked>
+				<name type="string">Basic Melee Weapon Proficiency</name>
+				<normal type="formattedtext" />
+				<prequisite type="formattedtext" />
+				<refnode type="string">reference.feat.basicmeleeweaponproficiency</refnode>
+				<special type="formattedtext" />
+				<summary type="formattedtext">
+					<p>You know how to use basic melee weapons.</p>
+				</summary>
+				<type type="string">Combat</type>
+			</id-00002>
+			<id-00003>
+				<benefit type="formattedtext">
+					<p>You gain proficiency in small arms (see Weapon Proficiency on page 243).</p>
+				</benefit>
+				<locked type="number">1</locked>
+				<name type="string">Small Arm Proficiency</name>
+				<normal type="formattedtext" />
+				<prequisite type="formattedtext" />
+				<refnode type="string">reference.feat.smallarmproficiency</refnode>
+				<special type="formattedtext" />
+				<summary type="formattedtext">
+					<p>You know how to use small arms.</p>
+				</summary>
+				<type type="string">Combat</type>
+			</id-00003>
+			<id-00004>
+				<benefit type="formattedtext">
+					<p>You gain proficiency in grenades (see Weapon Proficiency on page 243).</p>
+				</benefit>
+				<locked type="number">1</locked>
+				<name type="string">Grenade Proficiency</name>
+				<normal type="formattedtext" />
+				<prequisite type="formattedtext" />
+				<refnode type="string">reference.feat.grenadeproficiency</refnode>
+				<special type="formattedtext" />
+				<summary type="formattedtext">
+					<p>You know how to use grenades.</p>
+				</summary>
+				<type type="string">Combat</type>
+			</id-00004>
+		</proficiencylist>
+		<race type="string">Kasatha</race>
+		<racelink type="windowreference">
+			<class>race</class>
+			<recordname>reference.race.kasatha@Starfinder Core Rulebook</recordname>
+		</racelink>
+		<rp>
+			<current type="number">3</current>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">3</total>
+		</rp>
+		<saves>
+			<fortitude>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</fortitude>
+			<reflex>
+				<base type="number">2</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">3</total>
+			</reflex>
+			<will>
+				<base type="number">2</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">3</total>
+			</will>
+		</saves>
+		<size type="string">Medium</size>
+		<skilllist>
+			<id-00001>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Intimidate</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">2</stat>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00001>
+			<id-00002>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Physical Science</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">0</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">1</total>
+			</id-00002>
+			<id-00003>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Diplomacy</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">2</stat>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00003>
+			<id-00004>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Medicine</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">0</total>
+			</id-00004>
+			<id-00005>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Perception</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">1</total>
+			</id-00005>
+			<id-00006>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Survival</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">0</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">2</total>
+			</id-00006>
+			<id-00007>
+				<armorcheckmultiplier type="number">1</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Acrobatics</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00007>
+			<id-00008>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Culture</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">4</total>
+			</id-00008>
+			<id-00009>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Life Science</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">0</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">1</total>
+			</id-00009>
+			<id-00010>
+				<armorcheckmultiplier type="number">1</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Athletics</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">strength</statname>
+				<total type="number">1</total>
+			</id-00010>
+			<id-00011>
+				<armorcheckmultiplier type="number">1</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Sleight of Hand</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00011>
+			<id-00012>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Mysticism</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">0</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">1</total>
+			</id-00012>
+			<id-00013>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Bluff</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">2</stat>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00013>
+			<id-00014>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Disguise</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">2</stat>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">2</total>
+			</id-00014>
+			<id-00015>
+				<armorcheckmultiplier type="number">1</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Stealth</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00015>
+			<id-00016>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Engineering</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">0</total>
+			</id-00016>
+			<id-00017>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Computers</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">0</stat>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">0</total>
+			</id-00017>
+			<id-00018>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Sense Motive</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">5</total>
+			</id-00018>
+			<id-00019>
+				<armorcheckmultiplier type="number">0</armorcheckmultiplier>
+				<divinemod type="number">0</divinemod>
+				<enhancementmod type="number">0</enhancementmod>
+				<freeranks type="number">0</freeranks>
+				<freeskill type="number">0</freeskill>
+				<freeskillselect type="number">0</freeskillselect>
+				<insightmod type="number">0</insightmod>
+				<label type="string">Piloting</label>
+				<luckmod type="number">0</luckmod>
+				<misc type="number">0</misc>
+				<miscmod type="number">0</miscmod>
+				<moralemod type="number">0</moralemod>
+				<racialmod type="number">0</racialmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<stat type="number">1</stat>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00019>
+		</skilllist>
+		<skillpoints>
+			<avab type="number">0</avab>
+			<freespent type="number">0</freespent>
+			<spent type="number">8</spent>
+			<total type="number">8</total>
+		</skillpoints>
+		<sp>
+			<current type="number">6</current>
+			<fatique type="number">0</fatique>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">6</total>
+		</sp>
+		<specialabilitylist>
+			<id-00001>
+				<class type="string">Envoy</class>
+				<featuretype type="string">Feature</featuretype>
+				<level type="number">1</level>
+				<locked type="number">1</locked>
+				<name type="string">Expertise (Ex) 1d6</name>
+				<source type="string">Core Rulebook</source>
+				<text type="formattedtext">
+					<p>You are an expert at dealing with challenges that test your skills, be the challenges social or otherwise. At 1st level, when attempting a Sense Motive check, you can roll 1d6 (your expertise die) and add the result of the roll to your check as an insight bonus. You can use this and other expertise abilities as long as you have at least 1 Resolve Point remaining. At 5th level, anytime you roll your expertise die, you gain a +1 bonus to the result. At 9th, 17th, and 20th levels, this bonus increases by 1. At 13th level, you roll 1d8 as your expertise die instead of 1d6.</p>
+					<p>Beginning at 9th level, you have even greater expertise with skills to which you can add your expertise die that you have also selected with the Skill Focus feat. For each such skill, once per day when rolling your expertise die to add to that skill, you may roll the expertise die twice and take the better of the two results.</p>
+				</text>
+			</id-00001>
+			<id-00002>
+				<class type="string">Envoy</class>
+				<featuretype type="string">Feature</featuretype>
+				<level type="number">1</level>
+				<locked type="number">1</locked>
+				<name type="string">Skill Expertise (Ex)</name>
+				<source type="string">Core Rulebook</source>
+				<text type="formattedtext">
+					<p>At 1st level and every 4 levels thereafter, you can use expertise with one additional class skill. You must have at least 1 rank in a skill to select it, and it must come from the following list: Bluff (Cha), Computers (Int), Culture (Int), Diplomacy (Cha), Disguise (Cha), Engineering (Int), Intimidate (Cha), and Medicine (Int).</p>
+				</text>
+			</id-00002>
+			<id-00003>
+				<class type="string">Envoy</class>
+				<featuretype type="string">Special</featuretype>
+				<level type="number">1</level>
+				<locked type="number">1</locked>
+				<name type="string">Envoy Improvisation</name>
+				<source type="string">Core Rulebook</source>
+				<text type="formattedtext">
+					<p>As you gain experience, you learn envoy improvisations-little tricks that bolster allies, confound enemies, or change the ebb and flow of battle using guile, inspiration, or luck. You learn your first envoy improvisation at 1st level, and you learn an additional improvisation at 2nd level and every 2 levels thereafter.</p>
+					<p>If an improvisation allows you to grant an effect to an ally, you cannot grant yourself that effect unless the improvisation states otherwise. If an envoy improvisation allows a saving throw to resist its effects or requires an enemy to attempt a skill check, the DC is equal to 10 + half your envoy level + your Charisma modifier.</p>
+					<p>Some envoy improvisations are language-dependent, mindaffecting, sense-dependent, or some combination of any or all of these.</p>
+					<p>
+						<b>[LEVEL 1]</b>
+					</p>
+					<linklist>
+						<link class="class_feature" recordname="reference.classfeature.cleverfeint_ex_1@Starfinder Core Rulebook">Clever Feint (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.dispiritingtaunt_ex_1@Starfinder Core Rulebook">Dispiriting Taunt (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.don_tquit_ex_1@Starfinder Core Rulebook">Don't Quit (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.expandedattunement_ex_1@Starfinder Core Rulebook">Expanded Attunement (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.get_em_ex_1@Starfinder Core Rulebook">Get 'Em (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.inspiringboost_ex_1@Starfinder Core Rulebook">Inspiring Boost (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.lookalive_ex_1@Starfinder Core Rulebook">Look Alive (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.notintheface_ex_1@Starfinder Core Rulebook">Not in the Face (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.universalexpression_ex_1@Starfinder Core Rulebook">Universal Expression (Ex)</link>
+						<link class="class_feature" recordname="reference.classfeature.watchyourstep_ex_1@Starfinder Core Rulebook">Watch Your Step (Ex)</link>
+					</linklist>
+				</text>
+			</id-00003>
+		</specialabilitylist>
+		<speed>
+			<armor type="number">0</armor>
+			<base type="number">30</base>
+			<final type="number">30</final>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+		</speed>
+		<strengthbase type="number">0</strengthbase>
+		<theme type="string">Icon</theme>
+		<themeabilitylist>
+			<id-00001>
+				<level type="number">1</level>
+				<locked type="number">1</locked>
+				<name type="string">Theme Knowledge</name>
+				<text type="formattedtext">
+					<p>Choose a Profession skill. You are hooked deeply into the culture of your iconic profession. When attempting a Profession or Culture check to recall knowledge about other icons of your profession or details about your profession's cultural aspects, increase the DC by 5. You gain a +1 bonus to checks with your chosen Profession skill. Culture also becomes a class skill for you, though if it is a class skill from the class you take at 1st level, you instead gain a +1 bonus to Culture checks. In addition, you gain an ability adjustment of +1 to Charisma at character creation.</p>
+				</text>
+			</id-00001>
+		</themeabilitylist>
+		<themelink type="windowreference">
+			<class>theme</class>
+			<recordname>reference.theme.icon@Starfinder Core Rulebook</recordname>
+		</themelink>
+		<themerecord type="string">reference.theme.icon@Starfinder Core Rulebook</themerecord>
+		<token type="token"></token>
+		<traitlist>
+			<id-00001>
+				<locked type="number">1</locked>
+				<name type="string">Historian</name>
+				<source type="string">Kasatha</source>
+				<text type="formattedtext">
+					<p>Due to their in-depth historical training and the wide-ranging academic background knowledge they possess, kasathas receive a +2 racial bonus to Culture checks.</p>
+				</text>
+			</id-00001>
+			<id-00002>
+				<locked type="number">1</locked>
+				<name type="string">Four-Armed</name>
+				<source type="string">Kasatha</source>
+				<text type="formattedtext">
+					<p>Kasathas have four arms, which allows them to wield and hold up to four hands' worth of weapons and equipment. While their multiple arms increase the number of items they can have at the ready, it doesn't increase the number of attacks they can make during combat.</p>
+				</text>
+			</id-00002>
+			<id-00003>
+				<locked type="number">1</locked>
+				<name type="string">Desert Stride</name>
+				<source type="string">Kasatha</source>
+				<text type="formattedtext">
+					<p>Kasathas can move through nonmagical difficult terrain in deserts, hills, and mountains at their normal speed.</p>
+				</text>
+			</id-00003>
+			<id-00004>
+				<locked type="number">1</locked>
+				<name type="string">Natural Grace</name>
+				<source type="string">Kasatha</source>
+				<text type="formattedtext">
+					<p>Kasathas receive a +2 racial bonus to Acrobatics and Athletics checks.</p>
+				</text>
+			</id-00004>
+		</traitlist>
+		<upgradelist />
+	</character>
+</root>

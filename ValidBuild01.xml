@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="4" dataversion="20201016" release="19|CoreRPG:4">
+	<character>
+		<name type="string">ValidBuild01</name>
+		<abilities>
+			<charisma>
+				<score type="number">14</score>
+				<bonus type="number">2</bonus>
+			</charisma>
+			<constitution>
+				<score type="number">10</score>
+				<bonus type="number">0</bonus>
+			</constitution>
+			<dexterity>
+				<score type="number">11</score>
+				<bonus type="number">0</bonus>
+			</dexterity>
+			<intelligence>
+				<score type="number">12</score>
+				<bonus type="number">1</bonus>
+			</intelligence>
+			<strength>
+				<score type="number">13</score>
+				<bonus type="number">1</bonus>
+			</strength>
+			<wisdom>
+				<score type="number">13</score>
+				<bonus type="number">1</bonus>
+			</wisdom>
+		</abilities>
+		<race type="string">Humanoid (Kasatha)</race>
+		<racelink type="windowreference">
+			<class>race</class>
+			<recordname>reference.race.kasatha@*</recordname>
+		</racelink>
+		<theme type="string">Xenoseeker</theme>
+		<themelink type="windowreference">
+			<class>theme</class>
+			<recordname>reference.theme.xenoseeker@*</recordname>
+		</themelink>
+		<themerecord type="string">reference.theme.xenoseeker@*</themerecord>
+		<classes>
+			<id-00001>
+				<archetype type="string">Star Knight</archetype>
+				<archetypelink type="windowreference">
+				<class>archetype</class>
+					<recordname>reference.archetype.starknight@*</recordname>
+				</archetypelink>
+				<name type="string">Operative</name>
+				<level type="number">1</level>
+				<shortcut type="windowreference">
+					<class>class</class>
+					<recordname>reference.class.operative@*</recordname>
+				</shortcut>
+				<classkey type="string">Dexterity</classkey>
+			</id-00001>
+		</classes>
+			<id-00001>
+				<label type="string">Acrobatics</label>
+				<ranks type="number">0</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Athletics</label>
+				<ranks type="number">0</ranks>
+				<total type="number">4</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Bluff</label>
+				<ranks type="number">0</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Computers</label>
+				<ranks type="number">1</ranks>
+				<total type="number">6</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Culture</label>
+				<ranks type="number">1</ranks>
+				<total type="number">10</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Diplomacy</label>
+				<ranks type="number">0</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Disguise</label>
+				<ranks type="number">0</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Engineering</label>
+				<ranks type="number">0</ranks>
+				<total type="number">0</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Intimidate</label>
+				<ranks type="number">0</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Life Science</label>
+				<ranks type="number">1</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Medicine</label>
+				<ranks type="number">1</ranks>
+				<total type="number">6</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Mysticism</label>
+				<ranks type="number">1</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Perception</label>
+				<ranks type="number">0</ranks>
+				<total type="number">2</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Physical Science</label>
+				<ranks type="number">1</ranks>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Piloting</label>
+				<ranks type="number">1</ranks>
+				<total type="number">5</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Sense Motive</label>
+				<ranks type="number">1</ranks>
+				<total type="number">6</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Sleight of Hand</label>
+				<ranks type="number">1</ranks>
+				<total type="number">5</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Stealth</label>
+				<ranks type="number">1</ranks>
+				<total type="number">5</total>
+			</id-00001>
+			<id-00001>
+				<label type="string">Survival</label>
+				<ranks type="number">1</ranks>
+				<total type="number">8</total>
+			</id-00001>
+	</character>
+</root>

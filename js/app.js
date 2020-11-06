@@ -382,9 +382,11 @@ function parseCharacter(inputChar) {
 
         // Skills
         totalSkills = 1;
+        buildXML += "\t\t\t<skilllist>\n";
         $.each(v.items, function(j, w) {
             if (w.compset == "Skill") {
                 thisIteration = pad(totalSkills, 5);
+                totalSkills += 1;
                 buildXML += "\t\t\t<id-" + thisIteration + ">\n";
 
                 buildXML += "\t\t\t\t<label type=\"string\">" + w.name + "</label>\n";
@@ -398,14 +400,55 @@ function parseCharacter(inputChar) {
                 } else {
                     buildXML += "\t\t\t\t<total type=\"number\">0</total>\n";
                 }
-                
-                
-                //buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
-                
-
+                buildXML += "\t\t\t\t<state type=\"number\">1</state>\n";
+                buildXML += "\t\t\t\t<showonminisheet type=\"number\">0</showonminisheet>\n";
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
             }
         });
+        buildXML += "\t\t\t</skilllist>\n";
+
+        // Racial Traits
+        var abilityCount = 1;
+        buildXML += "\t\t\t<traitlist>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Ability" && !w.hasOwnProperty("AbilType")) {
+                // Need to determine if this is a class ability or racial trait
+                thisIteration = pad(abilityCount, 5);
+                abilityCount += 1
+                buildXML += "\t\t\t<id-" + thisIteration + ">\n";
+                buildXML += "\t\t\t\t<name type=\"string\">" + w.name.split("(")[0] + "</name>\n";
+                buildXML += "\t\t\t</id-" + thisIteration + ">\n";
+            }
+        });
+        buildXML += "\t\t\t</traitlist>\n";
+
+        // Theme abilities
+        var themeCount = 1;
+        buildXML += "\t\tt\<themeabilitylist>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Ability" && w.hasOwnProperty("AbScUsed")) {
+                thisIteration = pad(themeCount, 5);
+                themeCount += 1;
+                buildXML += "\t\t\t<id-" + thisIteration + ">\n";
+                buildXML += "\t\t\t\t<name type=\"string\">" + w.name.split("(")[0] + "</name>\n";
+                buildXML += "\t\t\t</id-" + thisIteration + ">\n";
+            }
+        });
+        buildXML += "\t\tt\</themeabilitylist>\n";
+
+        // Class Abilities
+        var classAbilCount = 1;
+        buildXML += "\t\tt\<specialabilitylist>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Ability" && !w.hasOwnProperty("AbScUsed") && w.hasOwnProperty("AbilType") && w.AbilType == "Extra") {
+                thisIteration = pad(classAbilCount, 5);
+                classAbilCount += 1;
+                buildXML += "\t\t\t<id-" + thisIteration + ">\n";
+                buildXML += "\t\t\t\t<name type=\"string\">" + w.name.split("(")[0] + "</name>\n";
+                buildXML += "\t\t\t</id-" + thisIteration + ">\n";
+            }
+        });
+        buildXML += "\t\tt\</specialabilitylist>\n";
     });
 
     buildXML += endXML;
