@@ -457,7 +457,7 @@ function parseCharacter(inputChar) {
                     charTotalRP = w.rvMax;
                     charCurrRP = w.rvCurrent;
                 }
-            }
+            } 
         });
 
         // FIXME
@@ -619,6 +619,11 @@ function parseCharacter(inputChar) {
                 buildXML += "\t\t<deity type=\"string\">" + w.name + "</deity>\n";
             } else if (w.compset == "Homeworld") {
                 buildXML += "\t\t<homeworld type=\"string\">" + w.name + "</homeworld>\n";
+            } else if (w.compset == "Derived" && w.name == "Initiative") {
+                buildXML += "\t\t<initiative>\n";
+                buildXML += "\t\t\t<misc type=\"number\">" + w.stMiscMod + "</misc>\n";
+                buildXML += "\t\t\t<total type=\"number\">" + w.stNet + "</total>\n";
+                buildXML += "\t\t</initiative>\n";
             }
         });
         
