@@ -1,7 +1,7 @@
 {
 	"portfolio": {
 		"charId": "p0F1qWr0",
-		"version": 38,
+		"version": 39,
 		"baseline": 0
 	},
 	"metadata": {
@@ -150,7 +150,7 @@
 					"description": "Intelligence represents how well your character learns and reasons, and is often associated with knowledge and education. Animals have Intelligence scores of 1 or 2, and any creature capable of understanding a language has a score of at least 3. A character with an Intelligence score of 0 is unconscious. Your character’s Intelligence modifier is factored into the following:\n\n• The number of bonus languages your character knows at the start of the game. Even if this modifier is a penalty, your character can still use her starting languages unless her Intelligence score is lower than 3. See page 40 for more about languages.\n\n• The number of skill ranks gained each level, though your character always gets at least 1 skill rank per level.\n\n• Computers, Culture, Engineering, Life Science, Medicine, Physical Science, and some Profession skill checks.\n\n• Bonus technomancer spells. The minimum Intelligence score needed to cast a technomancer spell is 10 + the spell’s level.",
 					"summary": "Intelligence represents how well your character learns and reasons, and is often associated with knowledge and education.",
 					"compset": "AbilScore",
-					"stNet": 11,
+					"stNet": 14,
 					"stMiscMod": -2,
 					"AbScUsed": "asInt"
 				},

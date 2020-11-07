@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="4" dataversion="20201016" release="19|CoreRPG:4">
+	<character>
+		<abilities>
+			<charisma>
+				<bonus type="number">2</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">15</score>
+			</charisma>
+			<constitution>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</constitution>
+			<dexterity>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</dexterity>
+			<intelligence>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</intelligence>
+			<keyabilitymod type="number">0</keyabilitymod>
+			<strength>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</strength>
+			<wisdom>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</wisdom>
+		</abilities>
+		<abilitiesedit>
+			<charisma>
+				<mod type="number">0</mod>
+			</charisma>
+			<constitution>
+				<mod type="number">0</mod>
+			</constitution>
+			<dexterity>
+				<mod type="number">0</mod>
+			</dexterity>
+			<intelligence>
+				<mod type="number">0</mod>
+			</intelligence>
+			<strength>
+				<mod type="number">0</mod>
+			</strength>
+			<wisdom>
+				<mod type="number">0</mod>
+			</wisdom>
+		</abilitiesedit>
+		<ac>
+			<sources>
+				<cmbmisc type="number">0</cmbmisc>
+				<eac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<dodge type="number">0</dodge>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</eac>
+				<kac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<ffmisc type="number">0</ffmisc>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</kac>
+			</sources>
+			<totals>
+				<cmd type="number">19</cmd>
+				<eac type="number">11</eac>
+				<kac type="number">11</kac>
+			</totals>
+		</ac>
+		<age type="string">25</age>
+		<alignment type="string">Lawful Neutral</alignment>
+		<attackbonus>
+			<base type="number">0</base>
+			<melee>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</melee>
+			<ranged>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</ranged>
+			<thrown>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</thrown>
+		</attackbonus>
+		<classes>
+			<id-00001>
+				<archetype type="string">Arcanamirium Sage</archetype>
+				<archetypelink type="windowreference">
+					<class>archetype</class>
+					<recordname>reference.archetype.arcanamiriumsage@*</recordname>
+				</archetypelink>
+				<classkey type="string">Charisma</classkey>
+				<classkeymod type="number">0</classkeymod>
+				<level type="number">0</level>
+				<name type="string">Envoy</name>
+				<shortcut type="windowreference">
+					<class>class</class>
+					<recordname>reference.class.envoy@*</recordname>
+				</shortcut>
+				<skillranks type="number">1</skillranks>
+			</id-00001>
+		</classes>
+		<companionlink type="windowreference">
+			<class />
+			<recordname />
+		</companionlink>
+		<defenses>
+			<sr>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</sr>
+		</defenses>
+		<dronelink type="windowreference">
+			<class />
+			<recordname />
+		</dronelink>
+		<encumbrance>
+			<armormaxstatbonus type="number">0</armormaxstatbonus>
+			<armormaxstatbonusactive type="number">0</armormaxstatbonusactive>
+		</encumbrance>
+		<exp type="number">0</exp>
+		<expneeded type="number">0</expneeded>
+		<hp>
+			<current type="number">0</current>
+			<temporary type="number">0</temporary>
+			<total type="number">0</total>
+			<wounds type="number">0</wounds>
+		</hp>
+		<initiative>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+			<total type="number">1</total>
+		</initiative>
+		<level type="number">0</level>
+		<mechlink type="windowreference">
+			<class />
+			<recordname />
+		</mechlink>
+		<powerarmor type="number">0</powerarmor>
+		<racelink type="windowreference">
+			<class />
+			<recordname />
+		</racelink>
+		<rp>
+			<current type="number">0</current>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">3</total>
+		</rp>
+		<saves>
+			<fortitude>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</fortitude>
+			<reflex>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</reflex>
+			<will>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</will>
+		</saves>
+		<skillpoints>
+			<avab type="number">1</avab>
+			<freespent type="number">0</freespent>
+			<spent type="number">0</spent>
+			<total type="number">1</total>
+		</skillpoints>
+		<sp>
+			<current type="number">0</current>
+			<fatique type="number">0</fatique>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">0</total>
+		</sp>
+		<speed>
+			<armor type="number">0</armor>
+			<base type="number">0</base>
+			<final type="number">0</final>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+		</speed>
+		<strengthbase type="number">0</strengthbase>
+		<themelink type="windowreference">
+			<class />
+			<recordname />
+		</themelink>
+		<token type="token"></token>
+	</character>
+</root>

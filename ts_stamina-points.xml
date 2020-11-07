@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root version="4" dataversion="20201016" release="19|CoreRPG:4">
+   <character>
+   <abilities>
+         <charisma>
+            <score type="number">15</score>
+            <bonus type="number">2</bonus>
+         </charisma>
+         <constitution>
+            <score type="number">11</score>
+            <bonus type="number">0</bonus>
+         </constitution>
+         <dexterity>
+            <score type="number">12</score>
+            <bonus type="number">1</bonus>
+         </dexterity>
+         <intelligence>
+            <score type="number">11</score>
+            <bonus type="number">0</bonus>
+         </intelligence>
+         <strength>
+            <score type="number">12</score>
+            <bonus type="number">1</bonus>
+         </strength>
+         <wisdom>
+            <score type="number">12</score>
+            <bonus type="number">1</bonus>
+         </wisdom>
+      </abilities>
+      <age type="string">25</age>
+	  <alignment type="string">Lawful Neutral</alignment>
+	  <classes>
+			<id-00001>
+                <archetype type="string">Arcanamirium Sage</archetype>
+                <archetypelink type="windowreference">
+					<class>archetype</class>
+					<recordname>reference.archetype.arcanamiriumsage@*</recordname>
+				</archetypelink>
+                <classkey type="string">Charisma</classkey>
+                <level type="number">1</level>
+                <shortcut type="windowreference">
+					<class>class</class>
+					<recordname>reference.class.envoy@*</recordname>
+				</shortcut>
+				<name type="string">Envoy</name>
+                <skillranks type="number">8</skillranks>
+			</id-00001>
+		</classes>
+	  <sp>
+         <current type="number">6</current>
+         <fatique type="number">0</fatique>
+         <mod type="number">0</mod>
+         <temporary type="number">0</temporary>
+         <total type="number">6</total>
+      </sp>
+   </character>
+</root>

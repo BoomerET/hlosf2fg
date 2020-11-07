@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root version="4" dataversion="20201016" release="19|CoreRPG:4">
+	<character>
+		<abilities>
+			<charisma>
+				<bonus type="number">2</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">15</score>
+			</charisma>
+			<constitution>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</constitution>
+			<dexterity>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</dexterity>
+			<intelligence>
+				<bonus type="number">0</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">11</score>
+			</intelligence>
+			<strength>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</strength>
+			<wisdom>
+				<bonus type="number">1</bonus>
+				<bonusmodifier type="number">0</bonusmodifier>
+				<damage type="number">0</damage>
+				<score type="number">12</score>
+			</wisdom>
+		</abilities>
+		<abilitiesedit>
+			<charisma>
+				<mod type="number">0</mod>
+			</charisma>
+			<constitution>
+				<mod type="number">0</mod>
+			</constitution>
+			<dexterity>
+				<mod type="number">0</mod>
+			</dexterity>
+			<intelligence>
+				<mod type="number">0</mod>
+			</intelligence>
+			<strength>
+				<mod type="number">0</mod>
+			</strength>
+			<wisdom>
+				<mod type="number">0</mod>
+			</wisdom>
+		</abilitiesedit>
+		<ac>
+			<sources>
+				<cmbmisc type="number">0</cmbmisc>
+				<eac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<dodge type="number">0</dodge>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</eac>
+				<kac>
+					<armor type="number">0</armor>
+					<deflection type="number">0</deflection>
+					<ffmisc type="number">0</ffmisc>
+					<misc type="number">0</misc>
+					<naturalarmor type="number">0</naturalarmor>
+					<shield type="number">0</shield>
+					<size type="number">0</size>
+					<temporary type="number">0</temporary>
+				</kac>
+			</sources>
+			<totals>
+				<cmd type="number">19</cmd>
+				<eac type="number">11</eac>
+				<kac type="number">11</kac>
+			</totals>
+		</ac>
+		<age type="string">25</age>
+		<alignment type="string">Lawful Neutral</alignment>
+		<attackbonus>
+			<base type="number">0</base>
+			<melee>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</melee>
+			<ranged>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</ranged>
+			<thrown>
+				<misc type="number">0</misc>
+				<size type="number">0</size>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</thrown>
+		</attackbonus>
+		<classes>
+			<id-00001>
+				<archetype type="string">Arcanamirium Sage</archetype>
+				<archetypelink type="windowreference">
+					<class>archetype</class>
+					<recordname>reference.archetype.arcanamiriumsage@*</recordname>
+				</archetypelink>
+				<classkey type="string">Charisma</classkey>
+				<level type="number">1</level>
+				<name type="string">Envoy</name>
+				<shortcut type="windowreference">
+					<class>class</class>
+					<recordname>reference.class.envoy@*</recordname>
+				</shortcut>
+			</id-00001>
+		</classes>
+		<classlevel type="string">Envoy 1</classlevel>
+		<companionlink type="windowreference">
+			<class />
+			<recordname />
+		</companionlink>
+		<defenses>
+			<sr>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</sr>
+		</defenses>
+		<deity type="string">Hylax</deity>
+		<dronelink type="windowreference">
+			<class />
+			<recordname />
+		</dronelink>
+		<encumbrance>
+			<armormaxstatbonus type="number">0</armormaxstatbonus>
+			<armormaxstatbonusactive type="number">0</armormaxstatbonusactive>
+		</encumbrance>
+		<gender type="string">Male</gender>
+		<height type="string">78</height>
+		<homeworld type="string">Absalom Station</homeworld>
+		<hp>
+			<current type="number">10</current>
+			<temporary type="number">0</temporary>
+			<total type="number">10</total>
+			<wounds type="number">0</wounds>
+		</hp>
+		<initiative>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+			<total type="number">1</total>
+		</initiative>
+		<languagelist>
+			<id-00001>
+				<name type="string">Aklo</name>
+			</id-00001>
+			<id-00002>
+				<name type="string">Common</name>
+			</id-00002>
+			<id-00003>
+				<name type="string">Kasatha</name>
+			</id-00003>
+			<id-00004>
+				<name type="string">Shirren</name>
+			</id-00004>
+		</languagelist>
+		<level type="number">1</level>
+		<loglist>
+			<id-00001>
+				<action_added type="string">ADJUST</action_added>
+				<level_added type="number">0</level_added>
+				<record_added type="string">Max Stamina Points</record_added>
+				<value_added type="string">-6</value_added>
+			</id-00001>
+		</loglist>
+		<mechlink type="windowreference">
+			<class />
+			<recordname />
+		</mechlink>
+		<name type="string">Envoy Negotiator</name>
+		<powerarmor type="number">0</powerarmor>
+		<race type="string">Humanoid (Kasatha)</race>
+		<racelink type="windowreference">
+			<class>race</class>
+			<recordname>reference.race.kasatha@*</recordname>
+		</racelink>
+		<rp>
+			<current type="number">3</current>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">3</total>
+		</rp>
+		<saves>
+			<fortitude>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">0</total>
+			</fortitude>
+			<reflex>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</reflex>
+			<will>
+				<base type="number">0</base>
+				<misc type="number">0</misc>
+				<temporary type="number">0</temporary>
+				<total type="number">1</total>
+			</will>
+		</saves>
+		<size type="string">Medium</size>
+		<skilllist>
+			<id-00001>
+				<label type="string">Acrobatics</label>
+				<miscmod type="number">2</miscmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">3</total>
+			</id-00001>
+			<id-00002>
+				<label type="string">Athletics</label>
+				<miscmod type="number">2</miscmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">strength</statname>
+				<total type="number">3</total>
+			</id-00002>
+			<id-00003>
+				<label type="string">Bluff</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00003>
+			<id-00004>
+				<label type="string">Computers</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">0</total>
+			</id-00004>
+			<id-00005>
+				<label type="string">Culture</label>
+				<miscmod type="number">3</miscmod>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">7</total>
+			</id-00005>
+			<id-00006>
+				<label type="string">Diplomacy</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00006>
+			<id-00007>
+				<label type="string">Disguise</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">2</total>
+			</id-00007>
+			<id-00008>
+				<label type="string">Engineering</label>
+				<miscmod type="number">-2</miscmod>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">-2</total>
+			</id-00008>
+			<id-00009>
+				<label type="string">Intimidate</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">charisma</statname>
+				<total type="number">6</total>
+			</id-00009>
+			<id-00010>
+				<label type="string">Life Science</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">0</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">1</total>
+			</id-00010>
+			<id-00011>
+				<label type="string">Medicine</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">0</total>
+			</id-00011>
+			<id-00012>
+				<label type="string">Mysticism</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">0</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">1</total>
+			</id-00012>
+			<id-00013>
+				<label type="string">Perception</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">1</total>
+			</id-00013>
+			<id-00014>
+				<label type="string">Physical Science</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">0</state>
+				<statname type="string">intelligence</statname>
+				<total type="number">1</total>
+			</id-00014>
+			<id-00015>
+				<label type="string">Piloting</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00015>
+			<id-00016>
+				<label type="string">Sense Motive</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">5</total>
+			</id-00016>
+			<id-00017>
+				<label type="string">Sleight of Hand</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00017>
+			<id-00018>
+				<label type="string">Stealth</label>
+				<ranks type="number">0</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">1</state>
+				<statname type="string">dexterity</statname>
+				<total type="number">1</total>
+			</id-00018>
+			<id-00019>
+				<label type="string">Survival</label>
+				<ranks type="number">1</ranks>
+				<ranksfree type="number">0</ranksfree>
+				<showonminisheet type="number">0</showonminisheet>
+				<state type="number">0</state>
+				<statname type="string">wisdom</statname>
+				<total type="number">2</total>
+			</id-00019>
+		</skilllist>
+		<skillpoints>
+			<avab type="number">-8</avab>
+			<freespent type="number">0</freespent>
+			<spent type="number">8</spent>
+			<total type="number">0</total>
+		</skillpoints>
+		<sp>
+			<current type="number">0</current>
+			<fatique type="number">0</fatique>
+			<mod type="number">0</mod>
+			<temporary type="number">0</temporary>
+			<total type="number">0</total>
+		</sp>
+		<specialabilitylist>
+			<id-00001>
+				<name type="string">Expertise</name>
+			</id-00001>
+			<id-00002>
+				<name type="string">Not in the Face</name>
+			</id-00002>
+		</specialabilitylist>
+		<speed>
+			<armor type="number">0</armor>
+			<base type="number">30</base>
+			<final type="number">30</final>
+			<misc type="number">0</misc>
+			<temporary type="number">0</temporary>
+			<total type="number">30</total>
+		</speed>
+		<strengthbase type="number">0</strengthbase>
+		<theme type="string">Icon</theme>
+		<themeabilitylist>
+			<id-00001>
+				<name type="string">Theme Knowledge</name>
+			</id-00001>
+		</themeabilitylist>
+		<themelink type="windowreference">
+			<class>theme</class>
+			<recordname>reference.theme.icon@*</recordname>
+		</themelink>
+		<themerecord type="string">reference.theme.icon@*</themerecord>
+		<token type="token"></token>
+		<traitlist>
+			<id-00001>
+				<name type="string">Desert Stride</name>
+			</id-00001>
+			<id-00002>
+				<name type="string">Four-Armed</name>
+			</id-00002>
+		</traitlist>
+		<weight type="string">160</weight>
+	</character>
+</root>

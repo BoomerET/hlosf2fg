@@ -38,6 +38,10 @@ var charTotalSP = "";
 var charTotalRP = "";
 var charCurrRP = "";
 var getArchetype = "";
+var keyAbility = "";
+var baseRanks = "";
+var compScore = 0;
+var ranksTotal = 0;
 var soldierArray = ["Acrobatics", "Athletics", "Engineering", "Intimidate", "Medicine", "Piloting", "Survival"];
 var envoyArray =  ["Acrobatics", "Athletics", "Bluff", "Computers", "Culture", "Diplomacy", "Disguise", "Engineering", "Intimidate", "Medicine", "Perception", "Piloting", "Sense Motive", "Sleight of Hand", "Stealth"];
 var mechanicArray =  ["Athletics", "Computers", "Engineering", "Medicine", "Perception", "Piloting"];
@@ -197,43 +201,7 @@ function parseCharacter(inputChar) {
     
     $.each(character.actors, function(i, v) {
         
-        // Abilities
-        buildXML += "\t\t<abilities>\n";
-        $.each(v.items, function(j, w) {
-            if (w.compset == "AbilScore") {
-                buildXML += "\t\t\t<" + w.name.toLowerCase() + ">\n";
-                buildXML += "\t\t\t\t<score type=\"number\">" + w.stNet + "</score>\n";
-                if (w.hasOwnProperty("stAbScModifier")) {
-                    buildXML += "\t\t\t\t<bonus type=\"number\">" + w.stAbScModifier + "</bonus>\n";
-                } else {
-                    buildXML += "\t\t\t\t<bonus type=\"number\">0</bonus>\n";
-                }
-                buildXML += "\t\t\t</" + w.name.toLowerCase() + ">\n";
-            } else if (w.compset == "Movement") {
-                charSpeed = w. stNet;
-            } else if (w.compset == "Reserves") {
-                if (w.name == "Hit Points") {
-                    charTotalHP = w.rvMax;
-                    charCurrHP = w.rvCurrent;
-                } else if (w.name == "Stamina") {
-                    charTotalSP = w.rvMax;
-                    charCurrSP = w.rvCurrent;
-                } else if (w.name == "Resolve Points") {
-                    charTotalRP = w.rvMax;
-                    charCurrRP = w.rvCurrent;
-                }
-            }
-        });
-        buildXML += "\t\t</abilities>\n";
-
-        // Stamina points
-        buildXML += "\t\t<sp>\n";
-		buildXML += "\t\t\t<current type=\"number\">" + charCurrSP + "</current>\n";
-		buildXML += "\t\t\t<fatique type=\"number\">0</fatique>\n";
-		buildXML += "\t\t\t<mod type=\"number\">0</mod>\n";
-		buildXML += "\t\t\t<temporary type=\"number\">0</temporary>\n";
-		buildXML += "\t\t\t<total type=\"number\">" + charTotalSP + "</total>\n";
-        buildXML += "\t\t</sp>\n";
+        
 
         // Race
         $.each(v.gameValues, function(k, x) {
@@ -385,53 +353,128 @@ function parseCharacter(inputChar) {
                 charClass = w.name.split("(")[0].trim();
                 smallCharClass = charClass.toLowerCase().replace(/[ _-]/g, '');
                 //console.log("Class reference: " + smallCharClass);
+
+                switch(smallCharClass) {
+                    case "envoy":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Charisma</classkey>\n";
+                        keyAbility = "charisma";
+                        baseRanks = 8;
+                        break;
+                    case "mechanic":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Intelligence</classkey>\n";
+                        keyAbility = "intelligence";
+                        baseRanks = 4;
+                        break;
+                    case "mystic":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Wisdom</classkey>\n";
+                        keyAbility = "wisdom";
+                        baseRanks = 6;
+                        break;
+                    case "operative":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Dexterity</classkey>\n";
+                        keyAbility = "dexterity";
+                        baseRanks = 8;
+                        break;
+                    case "solarian":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Charisma</classkey>\n";
+                        keyAbility = "charisma";
+                        baseRanks = 4;
+                        break;
+                    case "soldier":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Strength</classkey>\n";
+                        keyAbility = "strength";
+                        baseRanks = 4;
+                        break;
+                    case "technomancer":
+                        buildXML += "\t\t\t\t<classkey type=\"string\">Intelligence</classkey>\n";
+                        keyAbility = "intelligence";
+                        baseRanks = 4;
+                        break;
+                    default:
+                        buildXML += "\t\t\t\t<classkey type=\"string\">None</classkey>\n";
+                }
+                // FIXME, what is this?
+                buildXML += "\t\t\t\t<classkeymod type=\"number\">0</classkeymod>\n";
+
+                // class ranks depends on class and intelligence
+                $.each(v.items, function(j, w) {
+                    if (w.compset == "AbilScore") {
+                        //if (w.name == "Intelligence") {
+                        compScore = Math.floor((parseInt(w.stNet) - 10) / 2);
+                    }
+                });
+
+                ranksTotal = parseInt(baseRanks) + compScore;
+                buildXML += "\t\t\t\t<classskillranks type=\"number\">" + ranksTotal.toString() + "</classskillranks>\n";
+
+                // FIXME, what is this?
+                //buildXML += "\t\t\t\t<classstamina type=\"number\">6</classstamina>\n";
+
                 if (getArchetype != "") {
                     buildXML += "\t\t\t\t<archetype type=\"string\">" + getArchetype + "</archetype>\n";
+                    buildXML += "\t\t\t\t<archetypelink type=\"windowreference\">\n";
+                    buildXML += "\t\t\t\t\t<class>archetype</class>\n";
+                    buildXML += "\t\t\t\t\t<recordname>reference.archetype." + getArchetype.toLowerCase().replace(/[ _-]/g, '') + "@*</recordname>\n";
+                    buildXML += "\t\t\t\t</archetypelink>\n";
                 }
-
-                buildXML += "\t\t\t\t<archetypelink type=\"windowreference\">\n";
-                buildXML += "\t\t\t\t\t<class>archetype</class>\n";
-                buildXML += "\t\t\t\t\t<recordname>reference.archetype." + getArchetype.toLowerCase().replace(/[ _-]/g, '') + "@*</recordname>\n";
-                buildXML += "\t\t\t\t</archetypelink>\n";
-
                 buildXML += "\t\t\t\t<name type=\"string\">" + charClass + "</name>\n";
                 buildXML += "\t\t\t\t<level type=\"number\">" + w.clLevelNet + "</level>\n";
                 buildXML += "\t\t\t\t<shortcut type=\"windowreference\">\n";
                 buildXML += "\t\t\t\t\t<class>class</class>\n";
                 buildXML += "\t\t\t\t\t<recordname>reference.class." + smallCharClass + "@*</recordname>\n";
                 buildXML += "\t\t\t\t</shortcut>\n";
+                buildXML += "\t\t\t\t<skillranks type=\"number\">" + baseRanks + "</skillranks>\n";
 
-                switch(smallCharClass) {
-                    case "envoy":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Charisma</classkey>\n";
-                        break;
-                    case "mechanic":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Intelligence</classkey>\n";
-                        break;
-                    case "mystic":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Wisdom</classkey>\n";
-                        break;
-                    case "operative":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Dexterity</classkey>\n";
-                        break;
-                    case "solarian":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Charisma</classkey>\n";
-                        break;
-                    case "soldier":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Strength</classkey>\n";
-                        break;
-                    case "technomancer":
-                        buildXML += "\t\t\t\t<classkey type=\"string\">Intelligence</classkey>\n";
-                        break;
-                    default:
-                        buildXML += "\t\t\t\t<classkey type=\"string\">None</classkey>\n";
-                }
-
+                
                 buildXML += "\t\t\t</id-" + thisIteration + ">\n";
                 classCount += 1;
             }
         });
         buildXML += "\t\t</classes>\n";
+
+        // Abilities
+        buildXML += "\t\t<abilities>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "AbilScore") {
+                buildXML += "\t\t\t<" + w.name.toLowerCase() + ">\n";
+                buildXML += "\t\t\t\t<score type=\"number\">" + w.stNet + "</score>\n";
+                if (w.hasOwnProperty("stAbScModifier")) {
+                    buildXML += "\t\t\t\t<bonus type=\"number\">" + w.stAbScModifier + "</bonus>\n";
+                } else {
+                    buildXML += "\t\t\t\t<bonus type=\"number\">0</bonus>\n";
+                }
+                buildXML += "\t\t\t</" + w.name.toLowerCase() + ">\n";
+            } else if (w.compset == "Movement") {
+                charSpeed = w. stNet;
+            } else if (w.compset == "Reserves") {
+                if (w.name == "Hit Points") {
+                    charTotalHP = w.rvMax;
+                    charCurrHP = w.rvCurrent;
+                } else if (w.name == "Stamina") {
+                    charTotalSP = w.rvMax;
+                    charCurrSP = w.rvCurrent;
+                } else if (w.name == "Resolve Points") {
+                    charTotalRP = w.rvMax;
+                    charCurrRP = w.rvCurrent;
+                }
+            }
+        });
+
+        // FIXME
+        //buildXML += "\t\t\t<key type=\"number\">42</key>\n";
+        buildXML += "\t\t\t<keyability type=\"string\">" + keyAbility +"</keyability>\n";
+        // FIXME
+		//buildXML += "\t\t\t<keyabilitymod type=\"number\">45</keyabilitymod>\n";
+        buildXML += "\t\t</abilities>\n";
+
+        // Stamina points
+        buildXML += "\t\t<sp>\n";
+		buildXML += "\t\t\t<current type=\"number\">" + charCurrSP + "</current>\n";
+		buildXML += "\t\t\t<fatique type=\"number\">0</fatique>\n";
+		buildXML += "\t\t\t<mod type=\"number\">0</mod>\n";
+		buildXML += "\t\t\t<temporary type=\"number\">0</temporary>\n";
+		buildXML += "\t\t\t<total type=\"number\">" + charTotalSP + "</total>\n";
+        buildXML += "\t\t</sp>\n";
 
         // Skills
         totalSkills = 1;
@@ -593,6 +636,48 @@ function parseCharacter(inputChar) {
         });
         buildXML += "\t\t</languagelist>\n";
 
+        // Armor Class
+        buildXML += "\t\t<ac>\n";
+        buildXML += "\t\t\t<sources>\n";
+        buildXML += "\t\t\t</sources>\n";
+        buildXML += "\t\t\t<totals>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "ArmorClass") {
+                if (w.name == "Kinetic Armor Class") {
+                   buildXML += "\t\t\t\t<kac type=\"number\">" + w.stNet + "</kac>\n";
+                } else if (w.name == "Energy Armor Class") {
+                    buildXML += "\t\t\t\t<eac type=\"number\">" + w.stNet + "</eac>\n";
+                } else if (w.name == "AC vs. Combat Maneuvers") {
+                    buildXML += "\t\t\t\t<cmd type=\"number\">" + w.stNet + "</cmd>\n";
+                }
+            }
+        });
+        buildXML += "\t\t\t</totals>\n";
+        buildXML += "\t\t</ac>\n";
+
+        // Saves
+        buildXML += "\t\t<saves>\n";
+        $.each(v.items, function(j, w) {
+            if (w.compset == "Save") {
+                if (w.name == "Fortitude Save") {
+                    buildXML += "\t\t\t<fortitude>\n";
+                    //buildXML += "\t\t\t\t<base type=\"number\">" + 
+                    buildXML += "\t\t\t</fortitude>\n";
+                } else if (w.name == "Reflex Save") {
+                    buildXML += "\t\t\t<reflex>\n";
+                    buildXML += "\t\t\t\t<base type=\"number\">" + w.stBaseBon + "</base>\n";
+                    buildXML += "\t\t\t\t<total type=\"number\">" + w.stNet + "</total>\n";
+                    buildXML += "\t\t\t</reflex>\n";
+                } else if (w.name == "Will Save") {
+                    buildXML += "\t\t\t<will>\n";
+                    buildXML += "\t\t\t\t<base type=\"number\">" + w.stBaseBon + "</base>\n";
+                    buildXML += "\t\t\t\t<total type=\"number\">" + w.stNet + "</total>\n";
+                    buildXML += "\t\t\t</will>\n";
+                }
+            }
+        });
+        buildXML += "\t\t</saves>\n";
+
         // Size
         if (charRaceType != "ysoki") {
             buildXML += "\t\t<size type=\"string\">Medium</size>\n";
@@ -600,8 +685,6 @@ function parseCharacter(inputChar) {
             buildXML += "\t\t<size type=\"string\">Small</size>\n";
         }
 
-        
-        
 
         // Speed
         buildXML += "\t\t<speed>\n";
